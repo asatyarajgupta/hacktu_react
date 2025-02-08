@@ -32,8 +32,8 @@ export default function UseContact() {
         },
         {
             id: 5,
-            name: "Shivansh Shrivashtav",
-            designation: "CFO",
+            name: "Chakki Shrivashtava",
+            designation: "CFO/Designer",
             image:
                 "https://i.ibb.co/MytYSBbY/Whats-App-Image-2025-01-22-at-13-19-08-400cbd5f.jpg",
         },

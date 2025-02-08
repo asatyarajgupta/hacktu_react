@@ -1,6 +1,7 @@
 import Homepage from "./components/Homepage.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Backend from "./components/Backend.jsx";
+import StayUpdated from "./components/StayUpdated.jsx";
 
 export default function App() {
     return(
@@ -9,6 +10,9 @@ export default function App() {
                 <Routes>
                     <Route path={"/"} element={<Homepage />} />
                     <Route path={"/exam-devta"} element={<Backend />} />
+                    <Route path={"/junior-devta"} element={<StayUpdated />} />
+                    <Route path={"/senior-devta"} element={<StayUpdated />} />
+                    <Route path={"/foundation-devta"} element={<StayUpdated />} />
                 </Routes>
 
             </BrowserRouter>
