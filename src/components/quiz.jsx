@@ -25,120 +25,35 @@ const LearningStyleQuiz = () => {
         { question: "If you forget something you studied, what do you do?", name: "forget_strategy", options: ["Look for visual cues", "Re-read material", "Practice problems", "Ask someone"] }
     ];
 
-    const styles = {
-        body: {
-            backgroundColor: "#000000",
-            minHeight: "100vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "16px",
-            margin: 0
-        },
-        watermark: {
-            position: "absolute",
-            top: "10px",
-            left: "20px",
-            fontSize: "32px",
-            fontWeight: "bold",
-            color: "rgba(255, 255, 255, 0.2)", // Faint watermark effect
-            userSelect: "none",
-            pointerEvents: "none" // Prevents interaction
-        },
-        container: {
-            maxWidth: "900px",
-            width: "90%",
-            margin: "0 auto",
-            padding: "32px",
-            background: "linear-gradient(to bottom, #1a202c, #000000)",
-            color: "white",
-            borderRadius: "10px",
-            boxShadow: "0 0 15px rgba(0, 191, 255, 0.6)", // Soft glowing blue hue
-            border: "2px solid rgba(0, 191, 255, 0.3)" // Slightly visible border
-        },
-        header: {
-            textAlign: "center",
-            fontSize: "28px",
-            fontWeight: "bold",
-            marginBottom: "24px"
-        },
-        question: {
-            fontSize: "20px",
-            fontWeight: "500"
-        },
-        label: {
-            display: "block",
-            fontSize: "16px",
-            margin: "8px 0",
-            cursor: "pointer",
-            transition: "color 0.2s ease",
-            color: "#cbd5e0"
-        },
-        labelHover: {
-            color: "#90cdf4"
-        },
-        input: {
-            marginRight: "8px",
-            appearance: "none",
-            width: "16px",
-            height: "16px",
-            borderRadius: "50%",
-            background: "#2d3748",
-            border: "2px solid #718096",
-            outline: "none",
-            cursor: "pointer",
-            transition: "background 0.2s ease, border-color 0.2s ease"
-        },
-        inputChecked: {
-            background: "#63b3ed",
-            borderColor: "#63b3ed"
-        },
-        button: {
-            width: "100%",
-            padding: "12px",
-            marginTop: "24px",
-            borderRadius: "4px",
-            background: "#3182ce",
-            color: "white",
-            fontSize: "18px",
-            fontWeight: "bold",
-            transition: "background 0.3s ease, transform 0.3s ease"
-        },
-        buttonHover: {
-            background: "#63b3ed",
-            boxShadow: "0 0 10px #00bfff, 0 0 20px #00bfff",
-            transform: "rotate(3deg)",
-            animation: "glowRotate 1.5s linear infinite"
-        },
-        "@keyframes glowRotate": {
-            "0%": { boxShadow: "0 0 10px #00bfff, 0 0 20px #00bfff", transform: "rotate(3deg)" },
-            "50%": { boxShadow: "0 0 20px #00bfff, 0 0 40px #00bfff", transform: "rotate(-3deg)" },
-            "100%": { boxShadow: "0 0 10px #00bfff, 0 0 20px #00bfff", transform: "rotate(3deg)" }
-        }
-    };
-
     return (
-        <div style={styles.body}>
-            <div style={styles.watermark}>Cognito</div>
-            <div style={styles.container}>
-                <h2 style={styles.header}>Study Lok Learning Style & Aptitude Test</h2>
+        <div style={{ backgroundColor: "#000000", minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center", padding: "16px", margin: 0 }}>
+            <div style={{ position: "absolute", top: "10px", left: "20px", fontSize: "32px", fontWeight: "bold", color: "rgba(255, 255, 255, 0.2)", userSelect: "none", pointerEvents: "none" }}>Cognito</div>
+            <div style={{ maxWidth: "900px", width: "90%", margin: "0 auto", padding: "32px", background: "linear-gradient(to bottom, #1a202c, #000000)", color: "white", borderRadius: "10px", boxShadow: "0 0 15px rgba(0, 191, 255, 0.6)", border: "2px solid rgba(0, 191, 255, 0.3)" }}>
+                <h2 style={{ textAlign: "center", fontSize: "28px", fontWeight: "bold", marginBottom: "24px" }}>Study Lok Learning Style & Aptitude Test</h2>
                 <form onSubmit={handleSubmit}>
                     {questions.map((item, index) => (
                         <div key={index} style={{ marginBottom: "24px" }}>
-                            <p style={styles.question}>{index + 1}. {item.question}</p>
+                            <p style={{ fontSize: "20px", fontWeight: "500" }}>{index + 1}. {item.question}</p>
                             {item.options.map((option) => (
-                                <label
-                                    key={option}
-                                    style={styles.label}
-                                    onMouseEnter={(e) => (e.target.style.color = styles.labelHover.color)}
-                                    onMouseLeave={(e) => (e.target.style.color = styles.label.color)}
-                                >
+                                <label key={option} style={{ display: "flex", alignItems: "center", fontSize: "16px", margin: "8px 0", cursor: "pointer", transition: "color 0.2s ease", color: "#cbd5e0", gap: "10px" }}>
                                     <input
                                         type="radio"
                                         name={item.name}
                                         value={option}
+                                        checked={formData[item.name] === option}
                                         onChange={handleChange}
-                                        style={styles.input}
+                                        style={{
+                                            appearance: "none",
+                                            width: "18px",
+                                            height: "18px",
+                                            borderRadius: "50%",
+                                            border: "2px solid #718096",
+                                            cursor: "pointer",
+                                            transition: "background 0.2s ease, border-color 0.2s ease",
+                                            display: "inline-block",
+                                            position: "relative",
+                                            background: formData[item.name] === option ? "#63b3ed" : "transparent"
+                                        }}
                                     />
                                     {option}
                                 </label>
@@ -147,19 +62,16 @@ const LearningStyleQuiz = () => {
                     ))}
                     <button
                         type="submit"
-                        style={styles.button}
+                        style={{ width: "100%", padding: "12px", marginTop: "24px", borderRadius: "4px", background: "#3182ce", color: "white", fontSize: "18px", fontWeight: "bold", transition: "background 0.3s ease, transform 0.3s ease" }}
                         onMouseEnter={(e) => {
-                            e.target.style.background = styles.buttonHover.background;
-                            e.target.style.boxShadow = styles.buttonHover.boxShadow;
+                            e.target.style.background = "#63b3ed";
+                            e.target.style.boxShadow = "0 0 10px #00bfff, 0 0 20px #00bfff";
                             e.target.style.transform = "rotate(3deg)";
-                            e.target.style.animation = "glowRotate 1.5s linear infinite"; // Apply rotating glow animation
                         }}
-
                         onMouseLeave={(e) => {
-                            e.target.style.background = styles.button.background;
+                            e.target.style.background = "#3182ce";
                             e.target.style.boxShadow = "none";
                             e.target.style.transform = "rotate(0deg)";
-                            e.target.style.animation = "none"; // Remove animation
                         }}
                     >
                         Submit
