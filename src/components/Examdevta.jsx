@@ -38,7 +38,7 @@ const Examdevta = () => {
             })
 
             setResponse(res.data);
-            navigate("/exam-devta/response", {state : {summary: res.data.summary, topic_summaries: res.data.summary, video_url: res.data.video_url}});
+            navigate("/exam-devta/response", {state : {summary: res.data.summary, topic_summaries: res.data.topic_summaries, video_url: res.data.video_url}});
 
         } catch (err){
             console.error("Error:", err);
