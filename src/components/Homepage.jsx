@@ -9,23 +9,23 @@ export default function Homepage() {
         {
             title: "Moonbeam",
             link: "https://gomoonbeam.com",
-            thumbnail: "https://i.pinimg.com/736x/e9/eb/9e/e9eb9ec1b0da71003807507b2368cd21.jpg",
+            thumbnail: "https://i.ibb.co/23Q01vsM/juniornigga.jpg",
         },
         {
             title: "Cursor",
             link: "https://cursor.so",
-            thumbnail: "https://i.pinimg.com/736x/e9/eb/9e/e9eb9ec1b0da71003807507b2368cd21.jpg",
+            thumbnail: "https://i.ibb.co/FLndTbdj/exam.jpg",
         },
         {
             title: "Rogue",
             link: "https://userogue.com",
-            thumbnail: "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+            thumbnail: "https://i.ibb.co/d0ZFmXh6/senior.jpg",
         },
 
         {
             title: "Editorially",
             link: "https://editorially.org",
-            thumbnail: "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+            thumbnail: "https://i.ibb.co/PsvJNpYh/foundation.jpg" ,
         },
         {
             title: "Editrix AI",
