@@ -28,30 +28,29 @@ export default function Homepage() {
             thumbnail: "https://i.ibb.co/PsvJNpYh/foundation.jpg" ,
         },
         {
-            title: "Junior Devta",
-            link: "https://editrix.ai",
-            thumbnail: "https://i.ibb.co/23Q01vsM/juniornigga.jpg",
-        },
-        {
-            title: "Exam Devta",
-            link: "https://app.pixelperfect.quest",
-            thumbnail: "https://i.ibb.co/FLndTbdj/exam.jpg",
-        },
-
-        {
             title: "Senior Devta",
             link: "https://algochurn.com",
             thumbnail: "https://i.ibb.co/d0ZFmXh6/senior.jpg",
         },
         {
-            title: "Foundation Devta",
-            link: "https://ui.aceternity.com",
-            thumbnail: "https://i.ibb.co/PsvJNpYh/foundation.jpg",
+            title: "AI Reward System",
+            link: "https://app.pixelperfect.quest",
+            thumbnail: "https://i.ibb.co/nqc8c8ys/Whats-App-Image-2025-02-08-at-21-48-03-307f19f8.jpg",
         },
         {
-            title: "Junior Devta",
+            title: "Sentimental Analysis",
+            link: "https://editrix.ai",
+            thumbnail: "https://i.ibb.co/3yBpb19h/Whats-App-Image-2025-02-08-at-21-34-55-8feba92e.jpg",
+        },
+        {
+            title: "Harnessing & Updating Best Content",
+            link: "https://ui.aceternity.com",
+            thumbnail: "https://i.ibb.co/Xr8CH6fJ/Whats-App-Image-2025-02-08-at-21-58-48-923d3c50.jpg",
+        },
+        {
+            title: "ΑΙ ALGORITHIUM TO CREATE PERSONALIZED LEARNING CURVE",
             link: "https://tailwindmasterkit.com",
-            thumbnail: "https://i.ibb.co/23Q01vsM/juniornigga.jpg",
+            thumbnail: "https://i.ibb.co/fz3QXrFL/Whats-App-Image-2025-02-08-at-21-50-31-3a04205e.jpg",
         },
         {
             title: "Exam Devta",
