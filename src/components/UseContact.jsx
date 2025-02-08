@@ -44,10 +44,10 @@ export default function UseContact() {
             image:
                 "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
         },
-    ]
+    ];
     return (
-        <>
+        <div className="flex justify-center items-center p-6">
             <AnimatedTooltip items={people} />
-        </>
-    )
+        </div>
+    );
 }
