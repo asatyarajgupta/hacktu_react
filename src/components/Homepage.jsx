@@ -86,17 +86,57 @@ export default function Homepage() {
         },
     ]
     const items = [
-        { title: "Basic Plan", description: (
+        { title: "BASIC PLAN", description: (
                 <>
-                    <ul className="list-none space-y-1">
-                        <li>✔️ AI-powered learning</li>
-                        <li>❌ Includes ads</li>
-                        <li>❌ Limited features</li>
+                    <ul className="list-none space-y-1 flex flex-col items-start mx-auto w-fit">
+                        <li className="flex items-center gap-2"><span>✔️</span> AI-powered learning</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Summaries & Q&A</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> FlashCards & Quizzes</li>
+                        <li className="flex items-center gap-2"><span>❌</span> Ad-free experience</li>
+                        <li className="flex items-center gap-2"><span>❌</span> Personalized study recommendations</li>
+                        <li className="flex items-center gap-2"><span>❌</span> Advanced AI tools</li>
+                        <li className="flex items-center gap-2"><span>❌</span> Exclusive study notes & insights</li>
+                        <li className="flex items-center gap-2"><span>❌</span> Exam-focused AI coaching</li>
+                        <li className="flex items-center gap-2"><span>❌</span> One-on-one AI tutoring</li>
+                        <li className="flex items-center gap-2"><span>❌</span> Early access to new features</li>
+                        <li className="flex items-center gap-2"><span>❌</span> Premium rewards & discounts</li>
                     </ul>
                 </>
             ), link: "https://example.com/1" },
-        { title: "Premium Plan", description: "Ad-free, personalized AI learning with advanced tools", link: "https://example.com/2" },
-        { title: "Ultimate Plan", description: "AI tutoring, exam coaching, and exclusive early access", link: "https://example.com/3" },
+        { title: "PREMIUM PLAN", description: (
+                <>
+                    <ul className="list-none space-y-1 flex flex-col items-start mx-auto w-fit">
+                        <li className="flex items-center gap-2"><span>✔️</span> AI-powered learning</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Summaries & Q&A</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> FlashCards & Quizzes</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Ad-free experience</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Personalized study recommendations</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Advanced AI tools</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Exclusive study notes & insights</li>
+                        <li className="flex items-center gap-2"><span>❌</span> Exam-focused AI coaching</li>
+                        <li className="flex items-center gap-2"><span>❌</span> One-on-one AI tutoring</li>
+                        <li className="flex items-center gap-2"><span>❌</span> Early access to new features</li>
+                        <li className="flex items-center gap-2"><span>❌</span> Premium rewards & discounts</li>
+                    </ul>
+                </>
+            ), link: "https://example.com/2" },
+        { title: "ULTIMATE PLAN", description: (
+                <>
+                    <ul className="list-none space-y-1 flex flex-col items-start mx-auto w-fit">
+                        <li className="flex items-center gap-2"><span>✔️</span> AI-powered learning</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Summaries & Q&A</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> FlashCards & Quizzes</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Ad-free experience</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Personalized study recommendations</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Advanced AI tools</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Exclusive study notes & insights</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Exam-focused AI coaching</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> One-on-one AI tutoring</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Early access to new features</li>
+                        <li className="flex items-center gap-2"><span>✔️</span> Premium rewards & discounts</li>
+                    </ul>
+                </>
+            ), link: "https://example.com/1"  },
     ];
     return (
         <>
