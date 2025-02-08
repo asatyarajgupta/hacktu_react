@@ -26,14 +26,14 @@ export default function UseContact() {
         {
             id: 4,
             name: "Shaksam Mishra",
-            designation: "UX Designer",
+            designation: "Marketing",
             image:
                 "https://i.ibb.co/vxM9rghS/Whats-App-Image-2025-01-22-at-13-04-41-28ca3846.jpg",
         },
         {
             id: 5,
             name: "Chakki Shrivashtava",
-            designation: "CFO/Designer",
+            designation: "UI Designer",
             image:
                 "https://i.ibb.co/MytYSBbY/Whats-App-Image-2025-01-22-at-13-19-08-400cbd5f.jpg",
         },
