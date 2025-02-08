@@ -46,7 +46,7 @@ export default function UseContact() {
         },
     ];
     return (
-        <div className="flex justify-center items-center p-6">
+        <div className="flex justify-center items-center p-16 scale-150">
             <AnimatedTooltip items={people} />
         </div>
     );
