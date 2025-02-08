@@ -64,6 +64,7 @@ function Nav({ className }) {
                         <HoveredLink href="/individual">Individual</HoveredLink>
                         <HoveredLink href="/team">Team</HoveredLink>
                         <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+                        <HoveredLink href="http://localhost:5173/quiz">Quiz</HoveredLink>
                     </div>
                 </Navbar>
             </Menu>
