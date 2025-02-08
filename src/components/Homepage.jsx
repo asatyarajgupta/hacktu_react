@@ -7,80 +7,80 @@ import UseContact from "./UseContact.jsx";
 export default function Homepage() {
     const products = [
         {
-            title: "Moonbeam",
+            title: "Junior Devta",
             link: "https://gomoonbeam.com",
             thumbnail: "https://i.ibb.co/23Q01vsM/juniornigga.jpg",
         },
         {
-            title: "Cursor",
+            title: "Exam Devta",
             link: "https://cursor.so",
             thumbnail: "https://i.ibb.co/FLndTbdj/exam.jpg",
         },
         {
-            title: "Rogue",
+            title: "Senior Devta",
             link: "https://userogue.com",
             thumbnail: "https://i.ibb.co/d0ZFmXh6/senior.jpg",
         },
 
         {
-            title: "Editorially",
+            title: "Foundation Devta",
             link: "https://editorially.org",
             thumbnail: "https://i.ibb.co/PsvJNpYh/foundation.jpg" ,
         },
         {
-            title: "Editrix AI",
+            title: "Junior Devta",
             link: "https://editrix.ai",
             thumbnail: "https://i.ibb.co/23Q01vsM/juniornigga.jpg",
         },
         {
-            title: "Pixel Perfect",
+            title: "Exam Devta",
             link: "https://app.pixelperfect.quest",
             thumbnail: "https://i.ibb.co/FLndTbdj/exam.jpg",
         },
 
         {
-            title: "Algochurn",
+            title: "Senior Devta",
             link: "https://algochurn.com",
             thumbnail: "https://i.ibb.co/d0ZFmXh6/senior.jpg",
         },
         {
-            title: "Aceternity UI",
+            title: "Foundation Devta",
             link: "https://ui.aceternity.com",
             thumbnail: "https://i.ibb.co/PsvJNpYh/foundation.jpg",
         },
         {
-            title: "Tailwind Master Kit",
+            title: "Junior Devta",
             link: "https://tailwindmasterkit.com",
             thumbnail: "https://i.ibb.co/23Q01vsM/juniornigga.jpg",
         },
         {
-            title: "SmartBridge",
+            title: "Exam Devta",
             link: "https://smartbridgetech.com",
             thumbnail: "https://i.ibb.co/FLndTbdj/exam.jpg",
         },
         {
-            title: "Renderwork Studio",
+            title: "Senior Devta",
             link: "https://renderwork.studio",
             thumbnail: "https://i.ibb.co/d0ZFmXh6/senior.jpg",
         },
 
         {
-            title: "Creme Digital",
+            title: "Foundation Devta",
             link: "https://cremedigital.com",
             thumbnail: "https://i.ibb.co/PsvJNpYh/foundation.jpg",
         },
         {
-            title: "Golden Bells Academy",
+            title: "Junior Devta",
             link: "https://goldenbellsacademy.com",
             thumbnail: "https://i.ibb.co/23Q01vsM/juniornigga.jpg",
         },
         {
-            title: "Invoker Labs",
+            title: "Exam Devta",
             link: "https://invoker.lol",
             thumbnail: "https://i.ibb.co/FLndTbdj/exam.jpg",
         },
         {
-            title: "E Free Invoice",
+            title: "Senior Devta",
             link: "https://efreeinvoice.com",
             thumbnail: "https://i.ibb.co/d0ZFmXh6/senior.jpg",
         },
