@@ -22,7 +22,7 @@ export const HeroParallax = ({ products }) => {
     const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
     const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, 500]), springConfig);
     return (
-        <div ref={ref} className="h-[300vh] py-40 overflow-hidden relative flex flex-col bg-black text-white">
+        <div ref={ref} className="h-[300vh] py-40 overflow-hidden relative flex flex-col bg-black text-white w-full">
             <Header />
             <motion.div style={{ rotateX, rotateZ, translateY, opacity }}>
                 <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">

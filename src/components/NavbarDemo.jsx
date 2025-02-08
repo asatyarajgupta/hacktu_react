@@ -32,27 +32,27 @@ function Nav({ className }) {
                 <Navbar setActive={setActive} active={active} item="Loks">
                     <div className="text-sm grid grid-cols-2 gap-10 p-4">
                         <ProductItem
-                            title="Algochurn"
+                            title="Junior Devta"
                             href="https://algochurn.com"
-                            src="https://assets.aceternity.com/demos/algochurn.webp"
+                            src="https://i.ibb.co/23Q01vsM/juniornigga.jpg"
                             description="Prepare for tech interviews like never before."
                         />
                         <ProductItem
-                            title="Tailwind Master Kit"
+                            title="Exam Devta"
                             href="https://tailwindmasterkit.com"
-                            src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                            src="https://i.ibb.co/FLndTbdj/exam.jpg"
                             description="Production-ready Tailwind CSS components for your next project."
                         />
                         <ProductItem
-                            title="Moonbeam"
+                            title="Senior Devta"
                             href="https://gomoonbeam.com"
-                            src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                            src="https://i.ibb.co/d0ZFmXh6/senior.jpg"
                             description="Never write from scratch again. Go from idea to blog in minutes."
                         />
                         <ProductItem
-                            title="Rogue"
+                            title="Foundation Devta"
                             href="https://userogue.com"
-                            src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                            src={"https://i.ibb.co/PsvJNpYh/foundation.jpg"}
                             description="Respond to government RFPs, RFIs, and RFQs 10x faster using AI."
                         />
                     </div>
