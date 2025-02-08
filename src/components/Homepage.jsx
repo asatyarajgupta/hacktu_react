@@ -157,7 +157,7 @@ export default function Homepage() {
                         name="COGNITO"
                     />
                 </div>
-                <div className={"mt-[4rem]"}>
+                <div className={"mt-[4rem] px-[6rem] leading-relaxed"}>
                     <HoverEffect items={items}/>
 
                 </div>
