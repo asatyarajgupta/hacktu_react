@@ -95,7 +95,7 @@ export default function Homepage() {
 
 
             {/*</div>*/}
-            <div className={"h-[500vh] bg-black overflow-hidden"}>
+            <div className={"min-h-screen bg-black overflow-hidden"}>
                 <div className={"mt-[-2rem]"}>
                     <NavbarDemo/>
 
