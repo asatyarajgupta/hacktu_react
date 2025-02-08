@@ -1,7 +1,11 @@
 import { useState, useEffect, useRef } from "react";
+import axios from "axios";
+import { useNavigate} from "react-router-dom";
 
 const Examdevta = () => {
+    const navigate = useNavigate();
     const [urls, setUrls] = useState([""]);
+    const [response, setResponse] = useState(null);
     const canvasRef = useRef(null);
     const [animationRunning, setAnimationRunning] = useState(true);
     const maxUrls = 5;
@@ -23,10 +27,24 @@ const Examdevta = () => {
         setUrls(newUrls);
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async(event) => {
         event.preventDefault();
-        setAnimationRunning(false);
-        console.log("Submitted URLs:", urls);
+        try {
+            const data = {
+                "urls" : urls
+            }
+            const res = await axios.post("http://localhost:5000/summarize_and_generate", data, {
+                headers: {"Content-Type": "application/json" },
+            })
+
+            setResponse(res.data);
+            navigate("/exam-devta/response", {state : {summary: res.data.summary, topic_summaries: res.data.summary, video_url: res.data.video_url}});
+
+        } catch (err){
+            console.error("Error:", err);
+        }
+
+
         // Handle API request here
     };
 

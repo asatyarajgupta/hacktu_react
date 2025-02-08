@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import ExamResponse from "./ExamResponse.jsx";
 
 const ApiConnectUpdated = () => {
     const [urls, setUrls] = useState([""]);
@@ -33,6 +34,8 @@ const ApiConnectUpdated = () => {
                 headers: { "Content-Type": "application/json" },
             });
             setResponse(res.data);
+            const data = await response.json()
+            navigate("/exam-devta/response", {state : {summary: data.summary, topic_summaries: data.summary, video_url: data.video_url}});
         } catch (error) {
             console.error("Error:", error);
         }
@@ -119,6 +122,11 @@ const ApiConnectUpdated = () => {
                     <pre className="text-sm overflow-auto max-h-40">{JSON.stringify(response, null, 2)}</pre>
                 </div>
             )}
+            {/*{*/}
+            {/*    response && (*/}
+            {/*        <ExamResponse props={response} />*/}
+            {/*    )*/}
+            {/*}*/}
         </div>
     );
 };
