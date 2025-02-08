@@ -86,9 +86,9 @@ export default function Homepage() {
         },
     ]
     const items = [
-        { title: "Basic Plan", description: "Enter Basic Plan", link: "https://example.com/1" },
-        { title: "Premium Plan", description: "", link: "https://example.com/2" },
-        { title: "Ultimate Plan", description: "Sex Consensual(not)", link: "https://example.com/3" },
+        { title: "Basic Plan", description: "AI-powered learning with ads and limited features", link: "https://example.com/1" },
+        { title: "Premium Plan", description: "Ad-free, personalized AI learning with advanced tools", link: "https://example.com/2" },
+        { title: "Ultimate Plan", description: "AI tutoring, exam coaching, and exclusive early access", link: "https://example.com/3" },
     ];
     return (
         <>
