@@ -38,6 +38,8 @@ const Examdevta = () => {
             })
 
             setResponse(res.data);
+
+
             navigate("/exam-devta/response", {state : {summary: res.data.summary, topic_summaries: res.data.topic_summaries, video_url: res.data.video_url}});
 
         } catch (err){
@@ -65,6 +67,41 @@ const Examdevta = () => {
             height: 20,
         }));
 
+        // const updateBeams = () => {
+        //     if (!animationRunning) return;
+        //
+        //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+        //
+        //     beams.forEach((beam, index) => {
+        //         beam.y += beam.speed;
+        //
+        //         const formRect = document.querySelector("form").getBoundingClientRect();
+        //         if (
+        //             beam.x > formRect.left &&
+        //             beam.x < formRect.right &&
+        //             beam.y + beam.height > formRect.top &&
+        //             beam.y < formRect.bottom
+        //         ) {
+        //             beam.speed *= -1;
+        //         }
+        //
+        //         if (beam.y > canvas.height + 50 || beam.y < -50) {
+        //             beams[index] = {
+        //                 x: Math.random() * canvas.width,
+        //                 y: Math.random() * canvas.height * -1,
+        //                 speed: 2 + Math.random() * 2,
+        //                 color: colors[Math.floor(Math.random() * colors.length)],
+        //                 width: 2,
+        //                 height: 20,
+        //             };
+        //         }
+        //
+        //         ctx.fillStyle = beam.color;
+        //         ctx.fillRect(beam.x, beam.y, beam.width, beam.height);
+        //     });
+        //
+        //     requestAnimationFrame(updateBeams);
+        // };
         const updateBeams = () => {
             if (!animationRunning) return;
 
@@ -73,14 +110,19 @@ const Examdevta = () => {
             beams.forEach((beam, index) => {
                 beam.y += beam.speed;
 
-                const formRect = document.querySelector("form").getBoundingClientRect();
-                if (
-                    beam.x > formRect.left &&
-                    beam.x < formRect.right &&
-                    beam.y + beam.height > formRect.top &&
-                    beam.y < formRect.bottom
-                ) {
-                    beam.speed *= -1;
+                // Get the form element safely
+                const formElement = document.querySelector("form");
+
+                if (formElement) {
+                    const formRect = formElement.getBoundingClientRect();
+                    if (
+                        beam.x > formRect.left &&
+                        beam.x < formRect.right &&
+                        beam.y + beam.height > formRect.top &&
+                        beam.y < formRect.bottom
+                    ) {
+                        beam.speed *= -1;
+                    }
                 }
 
                 if (beam.y > canvas.height + 50 || beam.y < -50) {
@@ -100,6 +142,7 @@ const Examdevta = () => {
 
             requestAnimationFrame(updateBeams);
         };
+
 
         updateBeams();
 
