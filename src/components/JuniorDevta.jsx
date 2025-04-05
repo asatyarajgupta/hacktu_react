@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate} from "react-router-dom";
 
 const JuniorDevta = () => {
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
     const [urls, setUrls] = useState([""]);
     const [response, setResponse] = useState(null);
@@ -29,6 +30,7 @@ const JuniorDevta = () => {
 
     const handleSubmit = async(event) => {
         event.preventDefault();
+        setIsLoading(true); // Start loading
         try {
             const data = {
                 "urls" : urls
@@ -47,6 +49,17 @@ const JuniorDevta = () => {
 
         // Handle API request here
     };
+    useEffect(() => {
+        if (isLoading) {
+            document.body.classList.add('loading');
+        } else {
+            document.body.classList.remove('loading');
+        }
+
+        return () => {
+            document.body.classList.remove('loading');
+        };
+    }, [isLoading]);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -181,6 +194,19 @@ const JuniorDevta = () => {
                     </button>
                 </fieldset>
             </form>
+            {isLoading && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+                    <div className="flex flex-col items-center justify-center">
+                        {/* Pink spinner matching EXAM DEVTA theme */}
+                        <div className="w-20 h-20 border-4 border-pink-400 border-t-transparent rounded-full animate-spin"></div>
+
+                        {/* Pink text with matching styling */}
+                        <p className="mt-6 text-pink-400 text-lg font-orbitron uppercase tracking-wide animate-pulse">
+                            Processing your request...
+                        </p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

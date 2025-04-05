@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate} from "react-router-dom";
 
 const Examdevta = () => {
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
     const [urls, setUrls] = useState([""]);
     const [response, setResponse] = useState(null);
@@ -29,6 +30,7 @@ const Examdevta = () => {
 
     const handleSubmit = async(event) => {
         event.preventDefault();
+        setIsLoading(true); // Start loading
         try {
             const data = {
                 "urls" : urls
@@ -49,6 +51,17 @@ const Examdevta = () => {
 
         // Handle API request here
     };
+    useEffect(() => {
+        if (isLoading) {
+            document.body.classList.add('loading');
+        } else {
+            document.body.classList.remove('loading');
+        }
+
+        return () => {
+            document.body.classList.remove('loading');
+        };
+    }, [isLoading]);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -224,6 +237,17 @@ const Examdevta = () => {
                     </button>
                 </fieldset>
             </form>
+            {isLoading && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm">
+                    <div className="flex flex-col items-center justify-center">
+                        <div className="w-20 h-20 border-4 border-purple-500 border-t-purple-300 rounded-full animate-spin
+                          shadow-[0_0_15px_5px_rgba(168,85,247,0.3)]"></div>
+                        <p className="mt-6 text-purple-400 text-lg font-orbitron tracking-wide drop-shadow-[0_2px_2px_rgba(126,34,206,0.8)] animate-pulse">
+                            Processing your request...
+                        </p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
