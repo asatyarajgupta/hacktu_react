@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const SeniorDevta = () => {
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
     const [urls, setUrls] = useState([""]);
     const [language, setLanguage] = useState("Hindi");
@@ -33,6 +34,8 @@ const SeniorDevta = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setIsLoading(true); // Start loading
+
         try {
             const data = {
                 "urls": urls,
@@ -50,11 +53,22 @@ const SeniorDevta = () => {
                     individual_summaries: res.data.individual_summaries
                 }
             });
-
         } catch (err) {
             console.error("Error:", err);
+            setIsLoading(false); // Stop loading on error
         }
     };
+    useEffect(() => {
+        if (isLoading) {
+            document.body.classList.add('loading');
+        } else {
+            document.body.classList.remove('loading');
+        }
+
+        return () => {
+            document.body.classList.remove('loading');
+        };
+    }, [isLoading]);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -212,6 +226,19 @@ const SeniorDevta = () => {
                     </button>
                 </fieldset>
             </form>
+            {isLoading && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+                    <div className="flex flex-col items-center justify-center">
+                        {/* Spinner - larger and with better animation */}
+                        <div className="w-20 h-20 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+
+                        {/* Loading text with better spacing */}
+                        <p className="mt-6 text-orange-400 text-lg font-orbitron animate-pulse">
+                            Processing your request...
+                        </p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
